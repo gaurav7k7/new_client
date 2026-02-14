@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff4e91, #ff758c, #ff7eb3);
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.intro,
+.question {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing {
+  font-size: 2rem;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px white;
+  }
+  to {
+    text-shadow: 0 0 20px pink;
+  }
+}
+
+button {
+  padding: 12px 25px;
+  margin: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#yesBtn {
+  background: white;
+  color: #ff2e63;
+}
+
+#yesBtn:hover {
+  transform: scale(1.2);
+}
+
+#noBtn {
+  background: black;
+  color: white;
+  position: relative;
+}
+
+/* Slider */
+.slider {
+  margin-top: 40px;
+  perspective: 1000px;
+}
+
+.slide {
+  display: none;
+  font-size: 1.4rem;
+  padding: 20px;
+  animation: rotate 1s ease forwards;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+/* Reels */
+.reels {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.reels video {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.sticker {
+  width: 80px;
+  position: fixed;
+  animation: float 3s infinite ease-in-out;
+}
+
+.left {
+  left: 10px;
+  bottom: 20px;
+}
+.right {
+  right: 10px;
+  bottom: 20px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .reels video {
+    width: 200px;
+  }
+}

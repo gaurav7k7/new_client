@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Forever Love ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="fireworks"></canvas>
+    <audio id="bgMusic"></audio>
+
+    <!-- Intro Screen -->
+    <div class="intro" id="intro">
+      <h1 class="typing">Hey My Love 💖</h1>
+      <p id="nameAnimation"></p>
+      <button id="startBtn">Enter Our Love Story ✨</button>
+    </div>
+
+    <!-- Valentine Question -->
+    <div class="question hidden" id="question">
+      <h2>Will You Be My Valentine Ananya!!? 💘</h2>
+      <div class="buttons">
+        <button id="yesBtn">YES 😍</button>
+        <button id="noBtn">NO 😑</button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main hidden" id="main">
+      <img src="images/bubu.png" class="sticker left" />
+      <img src="images/dudu.png" class="sticker right" />
+
+      <!-- Quote Slider -->
+      <div class="slider">
+        <div class="slide active">
+          <h2>"You are my today and all of my tomorrows." 💞</h2>
+        </div>
+
+        <div class="slide">
+          <h2>"Every heartbeat of mine whispers your name kittyy." 💓</h2>
+        </div>
+
+        <div class="slide">
+          <h2>"You make my heart race in the sweetest way kitty." 🔥😉</h2>
+        </div>
+
+        <div class="slide">
+          <h2>"Warning: Highly addictive wifeyyyyy energy detected." 😏💋</h2>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button onclick="prevSlide()">⏮</button>
+        <button onclick="nextSlide()">⏭</button>
+      </div>
+
+      <!-- Instagram Style Reels -->
+      <h2 class="reel-title">Our Cute Moments kitty 🫀</h2>
+      <div class="reels">
+        <video src="videos/reel1.mp4" controls loop></video>
+        <video src="videos/reel2.mp4" controls loop></video>
+      </div>
+    </div>
+
+    <script src="javscript.js"></script>
+  </body>
+</html>
